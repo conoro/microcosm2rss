@@ -36,7 +36,7 @@ module.exports.microcosm = (event, context, callback) => {
             feed.item({
                 title: topic.item.title,
                 description: topic.item.title,
-                url: process.env.MICROCOSM_URL + "/conversations/" + topic.item.id, // link to the item
+                url: siteURL + "/conversations/" + topic.item.id, // link to the item
                 author: topic.item.meta.createdBy.profileName + "@example.com", // optional - defaults to feed author property
                 date: topic.item.meta.created // any format that js Date can parse.
             });
