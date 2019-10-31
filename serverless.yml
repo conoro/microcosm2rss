@@ -19,7 +19,7 @@ service: microcosm2rss
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
 
 # you can overwrite defaults here
 #  stage: dev
