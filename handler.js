@@ -45,7 +45,7 @@ module.exports.microcosm = (event, context, callback) => {
 
         feed.title = body.data.title;
         feed.description = body.data.description;
-        feed.site_url = process.env.MICROCOSM_URL;
+        feed.site_url = event.query.site + "/" + event.query.microcosm;
         feed.image_url = body.data.logoUrl;
 
         var xml = feed.xml();
